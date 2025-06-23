@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="hidden lg:flex ml-auto mr-1 items-center gap-2">        
           <button
             onClick={handleLogout}
-            className="px-1 py-1 rounded-md text-base font-medium text-gray-300 hover:bg-orange-600 focus:outline-none cursor-pointer"
+            className="px-1 py-1 rounded-md text-base font-medium text-gray-300 hover:bg-gray-600 focus:outline-none cursor-pointer"
           >
             <LogOut size={20} />
           </button>

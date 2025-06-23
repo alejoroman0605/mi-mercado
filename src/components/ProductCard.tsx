@@ -1,8 +1,19 @@
 import type { Product } from "../interface/Product";
+import { useNavigate } from "react-router-dom";
+import AddToCartButtom from "./AddToCartButtom";
 
-export default function ProductCardDetailed({ product }: { product: Product }) {  
+export default function ProductCard({ product }: { product: Product }) {  
+  const navigate = useNavigate();
+
   return (
     <div className="relative rounded-2xl shadow-md hover:shadow-lg transition-transform hover:scale-105 flex flex-col items-center bg-white border border-gray-200 p-4 h-full">
+      <button
+        onClick={() => navigate(`/product/${product.id}`, { state: { product } })}
+        className="absolute top-2 right-2 text-blue-600 hover:underline cursor-pointer mb-2"
+      >
+        Más detalles
+      </button>
+
       {product.image ? (
         <img
           src={product.image}
@@ -20,13 +31,7 @@ export default function ProductCardDetailed({ product }: { product: Product }) {
         Precio:{" "}
               <span className="text-gray-900 font-semibold">${product.price}</span>
       </div> 
-
-      {/* Botón agregar */} 
-      <button onClick={() => { }}
-        className="w-full text-sm font-semibold py-2 rounded-lg transition bg-blue-600 hover:bg-blue-700 text-white mt-auto cursor-pointer"
-      >
-        Agregar al Carrito
-      </button>
+      <AddToCartButtom product={product} />
     </div>
   );
 }

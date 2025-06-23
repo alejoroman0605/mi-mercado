@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export function NavigationMenu() {
     const menuItems = [
+        { label: "Productos", path: "/" },
         { label: "Carrito de compras", path: "/carrito" },
     ];
     
@@ -14,10 +15,10 @@ export function NavigationMenu() {
               to={path}
               className={({ isActive }) =>
                 [
-                  "px-2 py-1.5 rounded-md text-base font-medium",
+                  "px-3 py-3 rounded-md text-base font-medium",
                   isActive
-                    ? "bg-orange-700 text-white"
-                    : "text-gray-300 hover:bg-orange-600 hover:text-white",
+                    ? "bg-gray-700 text-white"
+                    : "text-gray-300 hover:bg-gray-600 hover:text-white",
                 ].join(" ")
               }
             >

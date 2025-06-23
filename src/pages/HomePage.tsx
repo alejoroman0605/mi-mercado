@@ -19,7 +19,6 @@ export default function HomePage() {
   const fetchProducts = useCallback(async () => {
     try {
         const response = await productService.getProducts(currentPage, pageSize, selectedCategory || "all");
-        console.log(response);
       setProducts(response.results);
       setTotalProducts(response.count);
     } catch (error) {

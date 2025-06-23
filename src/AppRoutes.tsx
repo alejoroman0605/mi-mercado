@@ -5,8 +5,16 @@ import LoginLayout from "./layouts/LoginLayout";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import CartPage from "./pages/CartPage";
+import ConfirmPayment from "./pages/ConfirmPayment";
 
-const protectedRoutes = [{ path: "/", element: <HomePage /> }];
+const protectedRoutes = [
+    { path: "/", element: <HomePage /> },
+    { path: "product/:id", element: <ProductDetailPage /> },
+    { path: "carrito", element: <CartPage /> },
+    { path: "confirmar-pago", element: <ConfirmPayment /> }
+];
 
 export function AppRoutes() {
   const location = useLocation();
