@@ -40,5 +40,11 @@ npm install          # instala dependencias
 
 [Fake Store API](https://fakestoreapi.com/) – productos, categorías y autenticación demo.
 
+### Usuario de prueba
+
+| username | password |
+|----------|----------|
+| `johnd`  | `m38rmF$` |
+
 ---
 ¡Feliz hacking!
