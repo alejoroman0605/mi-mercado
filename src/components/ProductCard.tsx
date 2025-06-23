@@ -18,7 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <img
           src={product.image}
           alt={product.title}
-          className="h-32 w-auto object-contain mb-2 mt-2"
+          className="h-32 w-auto object-contain mb-2 mt-8 lg:mt-2"
         />
       ) : (
         <div className="text-5xl mb-2 mt-2">🛒</div>
