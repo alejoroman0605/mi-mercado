@@ -1,4 +1,3 @@
-// src/components/Navbar/MobileMenu.tsx
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Menu, X, LogOut } from "lucide-react";
@@ -50,7 +49,7 @@ export function MobileMenu() {
                 <NavLink
                   to={path}
                   className={({ isActive }) => linkClass(isActive)}
-                  onClick={() => setIsOpen(false)} // Cierra el menú al navegar
+                  onClick={() => setIsOpen(false)}
                 >
                   {label}
                 </NavLink>
