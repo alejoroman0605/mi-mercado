@@ -40,7 +40,7 @@ export default function Navbar() {
             <LogOut size={20} />
           </button>
         </div>   
-         {/* Menú móvil alineado a la derecha */}
+        {/* Menú móvil alineado a la derecha */}
         <div className="ml-auto lg:hidden">
           <MobileMenu />
         </div>
