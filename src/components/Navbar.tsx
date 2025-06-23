@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { LogOut } from "lucide-react";
 import { NavigationMenu } from "./Navbar/NavigationMenu";
 import { authService } from "../service/authService";
+import { MobileMenu } from "./Navbar/MobileMenu";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -38,7 +39,11 @@ export default function Navbar() {
           >
             <LogOut size={20} />
           </button>
-        </div>        
+        </div>   
+         {/* Menú móvil alineado a la derecha */}
+        <div className="ml-auto lg:hidden">
+          <MobileMenu />
+        </div>
       </div>
     </nav>
   );
